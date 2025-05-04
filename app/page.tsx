@@ -2,7 +2,7 @@
 import Button from "@/src/components/Button";
 import { CommonHeading } from "@/src/components/CommonHeading";
 import CommonVideo from "@/src/components/CommonVideo";
-import Plans from "@/src/components/Packages";
+import Plans from "@/src/components/Plans";
 import PayoutSection from "@/src/components/PayoutSection";
 import TimelineStep from "@/src/components/TimelineStep";
 import TradeAnywhere from "@/src/components/TradeAnywhere";

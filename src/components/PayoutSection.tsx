@@ -38,7 +38,7 @@ const PayoutSection = () => {
 
   return (
     <div className="bg-black text-center  overflow-hidden">
-      <div className="min-h-screen flex flex-col items-center justify-center">
+      <div className="min-h-[50vh] sm:min-h-screen flex flex-col items-center justify-center">
         <div ref={containerRef} className="flex flex-col items-center">
           <motion.h1
             ref={firstRef}
@@ -47,7 +47,7 @@ const PayoutSection = () => {
             variants={textVariants(isFirstInView)}
             style={{ y: yFirst }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white"
+            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white"
           >
             We’ve Paid Out Over
           </motion.h1>
@@ -58,7 +58,7 @@ const PayoutSection = () => {
             variants={textVariants(isSecondInView)}
             style={{ y: ySecond }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4"
+            className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4"
           >
             $1M to Traders
           </motion.h1>
@@ -69,25 +69,25 @@ const PayoutSection = () => {
             variants={textVariants(isThirdInView)}
             style={{ y: yThird }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
-            className="text-lg md:text-xl text-gray-300 mb-10"
+            className="text-sm sm:text-lg md:text-xl text-gray-300 mb-10"
           >
             Your Trust is Our Fuel—Power Up with Zuperior
           </motion.p>
         </div>
       </div>
 
-      <div className="relative w-full h-[600px] mt-[-100px]">
+      <div className="relative w-full h-[400px] sm:h-[500px] md:h-[600px] mt-[-100px]">
         {/* Video */}
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute w-full h-[67%] object-cover object-top"
+          className="absolute w-full h-full object-cover object-top"
           src="https://framerusercontent.com/assets/xECpz8zWZNwZhoPNVva63Z5xs.mp4"
         />
 
-        <div className="absolute top-[20%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
+        <div className="absolute top-[20%] sm:top-[25%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 pointer-events-none">
           <div className="text-6xl md:text-8xl lg:text-[12rem] font-bold text-white flex items-center drop-shadow-lg">
             <span className="text-purple-500">$</span>
             <motion.span

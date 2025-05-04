@@ -25,7 +25,9 @@ export default function TimelineStep({ step, title }: Props) {
   }, []);
 
   const isOddStep = step % 2 !== 0;
-  const containerClass = isOddStep ? "left-30" : "right-14";
+  const containerClass = isOddStep
+    ? "left-20 sm:left-30"
+    : "right-10 sm:right-14";
   const flexDirection = isOddStep ? "flex-row" : "flex-row-reverse";
   const textAlign = isOddStep ? "text-left" : "text-right mr-5";
 
@@ -35,7 +37,7 @@ export default function TimelineStep({ step, title }: Props) {
         <div className="flex flex-col items-center" ref={ref}>
           <div
             className={cn(
-              "text-4xl font-bold transition-colors mt-4",
+              "text-2xl sm:text-4xl font-bold transition-colors mt-4",
               active ? "text-white" : "text-gray-500"
             )}
           >
@@ -58,8 +60,14 @@ export default function TimelineStep({ step, title }: Props) {
           transition={{ duration: 0.5, ease: "easeOut" }}
           className={textAlign}
         >
-          <p className="text-white font-medium text-lg mt-1">Step {step}</p>
-          <p className="text-white font-medium text-lg mt-1">{title}</p>
+          {/* <p className="text-white font-medium text-lg mt-1">Step {step}</p> */}
+          <p className="text-base sm:text-lg text-white font-medium mt-1">
+            Step {step}
+          </p>
+          {/* <p className="text-white font-medium text-lg mt-1">{title}</p> */}
+          <p className="text-xs sm:text-lg text-white font-medium mt-1">
+            {title}
+          </p>
         </motion.div>
       </div>
     </div>
